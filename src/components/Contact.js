@@ -1,6 +1,8 @@
 import { Field, Form, Formik } from 'formik'
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import File from './form/File'
+import Input from './form/Input'
 
 function Contact() {
     return (
@@ -14,6 +16,7 @@ function Contact() {
                 name: 'Tuğkan',
                 about: '',
                 gender: 1,
+                avatar: '',
                 accept: false,
                 skills: [],
             }}
@@ -24,7 +27,7 @@ function Contact() {
 
                 {({ values }) => (
                     <Form>
-                        <Field name="name" /> <br />
+                        <Input label="Ad-Soyad" name="name" />
                         <Field component='textarea' name="about" /> <br />
                         <label>
                             <Field type='checkbox' name='accept' />
@@ -41,6 +44,7 @@ function Contact() {
                             <option value='js' >JS</option>
                             <option value='react' >REACT</option>
                         </Field>
+                        <File label="Avatar" name="avatar" />
                         <button disabled={!values.accept} type='submit' >gönder</button>
                     </Form>
                 )}
