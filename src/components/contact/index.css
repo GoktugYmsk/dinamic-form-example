@@ -1,0 +1,65 @@
+.container {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+}
+
+.textarea {
+    background: rgb(26, 62, 112);
+    margin-top: 20px;
+    color: white;
+}
+
+.checkBox {
+    margin-top: 20px;
+}
+
+.optionBox {
+    margin-left: 30px;
+    position: relative;
+    background: rgb(26, 62, 112);
+    border-style: none;
+    text-decoration: none !important;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.selectBox {
+    margin-top: 20px;
+    margin-left: 60px;
+    color: white;
+    background: rgb(26, 62, 112);
+
+}
+
+.selectBox option {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.selectBox option:hover {
+    background: rgb(195, 55, 55);
+}
+
+.acceptButton {
+    background: rgb(26, 62, 112);
+    border-style: none;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+.acceptButton:hover {
+    background: rgb(56, 88, 133);
+}
+.firstInput{
+    position: relative;
+    bottom: 100px;
+}
