@@ -19,13 +19,14 @@ function File({label, ...props}) {
     
   return (
     <div>
-      <label>
+      <div>
         <div>{label} </div>
         <button onClick={fileOpen} type='button' >
           {field.value && <> 'Dosya Seçildi' <FiCheck size='15' /></>}
           {!field.value && 'Dosya Seç'}
         </button>
-      </label>
+        {field.value && <button onClick={() => helpers.setValue('')} >Dosyayı kaldır</button>}
+      </div>
     </div>
   )
 }

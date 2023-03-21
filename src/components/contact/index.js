@@ -5,6 +5,10 @@ import { Helmet } from 'react-helmet'
 
 import File from '../form/File'
 import Input from '../form/Input'
+import CheckBox from '../form/CheckBox'
+import Textarea from '../form/Textarea'
+import Select from '../form/Select'
+import Radio from '../form/Radio'
 import './index.css'
 
 function Contact() {
@@ -29,15 +33,14 @@ function Contact() {
                 {({ values }) => (
                     <Form>
                         <Input className='firtInput' label="Ad-Soyad" name="name" />
-                        <Field component='textarea' className='textarea'  name="about" /> <br />
-                        <label>
-                            <Field type='checkbox' className='checkBox' name='accept' />
-                            kuralları kabul ediyorum!
-                        </label>
-                        <Field component='select' className='optionBox' name='gender'>
+                        <Textarea label='Hakkında' name='about' /> <br />
+                        <CheckBox label="kuralları kabul ediyorum!" name='accept' />
+                        <Select label='Cinsiyet' name='gender' original={true} options={[
+                            {key: '1', value: 'Kadın'},
+                            {key: '2', value: 'Erkek'}
+                        ]} />
                             <option value={1} >Kadın</option>
-                            <option value={2} >Erkek</option>
-                        </Field><br />
+                            <option value={2} >Erkek</option> <br />
                         <Field component='select' name='skills' className='selectBox' multiple={true} >
                             <option value='php' >PHP</option>
                             <option value='html' >HTML</option>
@@ -46,7 +49,13 @@ function Contact() {
                             <option value='react' >REACT</option>
                         </Field>
                         <File label="Avatar" name="avatar" />
+                        <Radio className='radio' label="Seviyenizi Seçin" options={[
+                            {key: 'jr', value: 'Jr.Developper'},
+                            {key: 'Sr', value: 'Sr.Developper'},
+                            {key: 'ninja', value: 'Ninja'} 
+                        ]} />
                         <button disabled={!values.accept} className='acceptButton' type='submit' >gönder</button>
+                        <pre>{JSON.stringify(values )}</pre>
                     </Form>
                 )}
 

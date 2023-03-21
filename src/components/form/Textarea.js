@@ -4,17 +4,13 @@ import React from 'react'
 import { FiCheck } from "react-icons/fi"
 import classNames from 'classnames'
 
-function CheckBox({ label, ...props }) {
+function Textarea({ label, ...props }) {
   const [field, meta, helpers] = useField(props)
   return (
     <label>
-      <div>{label} </div>
-      <button  className='' onClick={()=>{helpers.setValue(!field.value)}} >
-        <FiCheck/>
-      </button>
-      {label}
+        <textarea {...field} {...props } />
     </label>
   )
 }
 
-export default CheckBox
+export default Textarea
