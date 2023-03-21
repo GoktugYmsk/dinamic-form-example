@@ -5,7 +5,6 @@ import Blog from './components/Blog';
 import Contact from './components/contact';
 import Home from './components/Home';
 import Login from './components/Login';
-import UseMemo from './UseMemo';
 import './App.css'
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
           <Route path="/Blog" element={<Blog />} />
           <Route path="/Login" element={<Login />} />
         </Routes>
-        <UseMemo />
       </div>
     </div>
   );

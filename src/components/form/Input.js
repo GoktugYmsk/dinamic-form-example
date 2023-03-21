@@ -1,6 +1,6 @@
-import { Field } from 'formik'
-import { useField } from 'formik'
 import React from 'react'
+
+import { useField } from 'formik'
 
 function Input({label, ...props}) {
     const [field,meta,helpers] = useField(props)

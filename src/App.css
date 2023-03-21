@@ -1,8 +1,11 @@
 .App {
-    background: rgb(8, 40, 30);
-    height: 100%;
+    background: rgb(10, 21, 40);
+    border-radius: 10px;
+    height: 1600px;
     width: 100%;
+    display: flex;
 }
+
 .mainPage {
     position: relative;
     top: 100px;
@@ -11,9 +14,10 @@
     margin-right: 10px;
     text-decoration: none;
     position: relative;
-    left: 500px;
+    left: 550px;
 }
-.mainPage:hover{
+
+.mainPage:hover {
     color: rgb(123, 140, 186);
 }
 
@@ -23,34 +27,36 @@
     color: rgb(72, 163, 173);
     margin-right: 10px;
     text-decoration: none;
-    left: 520px;
+    left: 570px;
 }
 
-.contact:hover{
+.contact:hover {
     color: rgb(123, 140, 186);
 }
+
 .blog {
     position: relative;
     top: 100px;
     color: rgb(72, 163, 173);
     margin-right: 10px;
     text-decoration: none;
-    left: 540px;
+    left: 590px;
 }
 
 
-.blog:hover{
+.blog:hover {
     color: rgb(123, 140, 186);
 }
+
 .login {
     position: relative;
     top: 100px;
     color: rgb(72, 163, 173);
     margin-right: 10px;
     text-decoration: none;
-    left: 560px;
+    left: 610px;
 }
 
-.login:hover{
+.login:hover {
     color: rgb(123, 140, 186);
 }

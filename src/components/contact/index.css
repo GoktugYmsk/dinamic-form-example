@@ -1,9 +1,15 @@
 .container {
-    height: 100vh;
+    position: relative;
+    left: 280px;
+    top: 300px;
+    color: white;
+    width: 1000px;
+    height: 900px;
     align-items: center;
     justify-content: center;
     display: flex;
-    color: white;
+    border-style: dashed;
+
 }
 
 .textarea {
@@ -47,10 +53,10 @@
 .acceptButton {
     background: rgb(26, 62, 112);
     border-style: none;
+    position: relative;
+    top: 100px;
     border-radius: 10px;
-    margin-top: 40px;
-    margin-left: 60px;
-    width: 80px;
+    width: 100vh;
     height: 40px;
     cursor: pointer;
     color: white;
@@ -59,7 +65,8 @@
 .acceptButton:hover {
     background: rgb(56, 88, 133);
 }
-.firstInput{
+
+.firstInput {
     position: relative;
     bottom: 100px;
 }
