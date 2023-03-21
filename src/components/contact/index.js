@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-import { Field, Form, Formik } from 'formik'
+import { Field, Form, Formik, useFormikContext } from 'formik'
 import { Helmet } from 'react-helmet'
 
 import File from '../form/File'
@@ -12,13 +12,40 @@ import Radio from '../form/Radio'
 import './index.css'
 
 function Contact() {
+
+    const AutoSubmitCode = () => {
+        const { values, submitForm } = useFormikContext()
+        useEffect(() => {
+            if (values.code.length === 6) {
+                console.log('Çalıştı')
+            }
+        }, [values, submitForm])
+        return null
+    }
+
     return (
         <div className='container' >
-            <div className='altbox' > 
+            <div className='altbox' >
                 <Helmet>
                     <title>İletişim</title>
                     <meta name='description' content='iletişim description' />
                 </Helmet>
+
+                <Formik initialValues={{
+                    code: ''
+                }} onSubmit={values => {
+                    console.log(values)
+                }} >
+
+
+                    {({ values }) => (
+                        <Form>
+                            <Input label="Kodu Girin" name="code" />
+                            <AutoSubmitCode/>
+                        </Form>
+                    )}
+                </Formik>
+
                 <Formik initialValues={{
                     name: 'Tuğkan',
                     about: '',
